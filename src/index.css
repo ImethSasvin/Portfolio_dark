@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+/* We'll keep the Inter import as a fallback */
+
+/* Import PP Neue Montreal font - this is a custom font so we need to use @font-face */
+@font-face {
+  font-family: 'PP Neue Montreal';
+  src: url('https://cdn.fontshare.com/wf/L2MOWTRX33EGCJVCXQ7BOZ55YFOIOCNW/VP2DZSFD3DQKSGVDJTSJNQIDSM7LZ3JG/CJPBDTPEPVHJREXJKPBSIKX7HHRFSHYX.woff2') format('woff2'),
+       url('https://cdn.fontshare.com/wf/L2MOWTRX33EGCJVCXQ7BOZ55YFOIOCNW/VP2DZSFD3DQKSGVDJTSJNQIDSM7LZ3JG/CJPBDTPEPVHJREXJKPBSIKX7HHRFSHYX.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PP Neue Montreal';
+  src: url('https://cdn.fontshare.com/wf/QGLOCBQYTFFZXKFXYYWSPJUN53KTNYZM/BHIKK32RODHVBHRSYLRGFSK6GFS6M42B/3D5FWRPFPFKIIIBRZMYFOMM7YLUUV5CU.woff2') format('woff2'),
+       url('https://cdn.fontshare.com/wf/QGLOCBQYTFFZXKFXYYWSPJUN53KTNYZM/BHIKK32RODHVBHRSYLRGFSK6GFS6M42B/3D5FWRPFPFKIIIBRZMYFOMM7YLUUV5CU.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+    --radius: 0.5rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+  
+  html, body {
+    @apply bg-background text-foreground antialiased;
+    scroll-behavior: smooth;
+  }
+
+  ::selection {
+    @apply bg-white/10 text-white;
+  }
+}
+
+@layer components {
+  .nav-link {
+    @apply relative text-white text-nav tracking-wide px-3 py-2 transition-all duration-300 after:absolute after:bottom-0 after:left-0 after:h-[1px] after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full;
+  }
+  
+  .social-link {
+    @apply text-muted hover:text-white transition-colors duration-300;
+  }
+  
+  .underline-blue {
+    @apply relative inline-block after:absolute after:bottom-0 after:left-0 after:h-[1px] after:w-full after:bg-[#4682B4] after:transition-all after:duration-300;
+  }
+}
+
+@layer utilities {
+  .animate-delay-200 {
+    animation-delay: 200ms;
+  }
+  
+  .animate-delay-400 {
+    animation-delay: 400ms;
+  }
+  
+  .animate-delay-600 {
+    animation-delay: 600ms;
+  }
+  
+  .animate-delay-800 {
+    animation-delay: 800ms;
+  }
+}

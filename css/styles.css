@@ -56,15 +56,17 @@ header {
 nav {
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 60px; /* Increased spacing between links and button */
     margin-left: auto;
     margin-right: 10px; /* Slightly move nav items towards center */
 }
 
 nav a {
+    position: relative;
     text-decoration: none;
     color: black;
     font-size: 16px;
+    transition: color 0.3s ease-in-out;
 }
 
 .contact-btn {
@@ -95,6 +97,7 @@ nav a {
     color: #6a6a6a;
     position: absolute;
     left: 170px; /* Moves closer to the left edge */
+    top: 250px; /* Reduced top gap */
 }
 
 /* Position "BASED IN COLOMBO, LK." in the center */
@@ -103,8 +106,9 @@ nav a {
     font-size: 12.39px;
     color: #6a6a6a;
     position: absolute;
-    left: 50%;
+    left: 850px;
     transform: translateX(-50%);
+    top: 250px; /* Reduced top gap */
 }
 
 .passionate {
@@ -112,10 +116,10 @@ nav a {
     font-size: 12.39px;
     color: #6a6a6a;
     position: absolute;
-    right: 120px;
+    right: 225px;
     max-width: 400px;
     text-align: justify;
-    top: 300px; /* Moves the paragraph slightly up */
+    top: 235px; /* Reduced top gap */
 }
 
 /* Hero Section */
@@ -195,13 +199,13 @@ h2 span {
 /* Social Links Styling */
 .social-links {
     position: absolute;
-    bottom: 40px; /* Adjust as needed to position at rock bottom */
+    bottom: 30px; /* Adjust as needed to position at rock bottom */
     left: 50%;
     transform: translateX(-50%);
     display: flex;
-    gap: 20px;
+    gap: 120px;
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 400;
     color: black;
 }
 
@@ -218,18 +222,37 @@ h2 span {
 /* Name Container Styling */
 .name-container {
     position: absolute;
-    top: 50%; /* Adjusted to be between the two sections */
-    left: 124px; /* Left padding */
+    top: 65%; /* Adjusted to move further down */
+    left: 124px; /* Left padding remains the same */
     transform: translateY(-50%);
     text-align: left;
 }
 
 .name {
-    font-size: 100px;
-    font-weight: bold;
+    font-size: 125px;
+    font-weight: 300;
+    margin-bottom: -35px; /* Reduce gap between lines */
 }
 
 .position {
-    font-size: 100px;
+    font-size: 125px;
     font-weight: 500;
+    margin-left: 200px; /* Adjusted to move it further from the left */
+}
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease-in-out;
+}
+
+nav a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
 }

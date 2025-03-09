@@ -98,7 +98,7 @@ nav a {
     color: #6a6a6a;
     position: absolute;
     left: 170px; /* Moves closer to the left edge */
-    top: 250px; /* Reduced top gap */
+    top: 180px; /* Reduced top gap */
 }
 
 /* Position "BASED IN COLOMBO, LK." in the center */
@@ -109,7 +109,7 @@ nav a {
     position: absolute;
     left: 850px;
     transform: translateX(-50%);
-    top: 250px; /* Reduced top gap */
+    top: 180px; /* Reduced top gap */
 }
 
 .passionate {
@@ -117,15 +117,15 @@ nav a {
     font-size: 12.39px;
     color: #6a6a6a;
     position: absolute;
-    right: 225px;
+    right: 200px;
     max-width: 400px;
     text-align: justify;
-    top: 235px; /* Reduced top gap */
+    top: 165px; /* Reduced top gap */
 }
 
 /* Hero Section */
 .hero {
-    margin-top: 30px;
+    margin-top: 30zpx;
     text-align: center;
 }
 
@@ -200,7 +200,7 @@ h2 span {
 /* Social Links Styling */
 .social-links {
     position: absolute;
-    bottom: 30px; /* Adjust as needed to position at rock bottom */
+    top: 80%; /* Adjust as needed to position at rock bottom */
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -223,7 +223,7 @@ h2 span {
 /* Name Container Styling */
 .name-container {
     position: absolute;
-    top: 63%; /* Adjusted to move further down */
+    top: 52%; /* Adjusted to move further down */
     left: 124px; /* Left padding remains the same */
     transform: translateY(-50%);
     text-align: left;
@@ -259,3 +259,94 @@ nav a:hover::after {
     transform-origin: left;
 }
 
+/* Section Divider */
+.section-divider {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 1px;
+    background-color: #6a6a6a;
+}
+
+/* Enable scrolling */
+html, body {
+    height: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+/* Ensure About Section is positioned in a new scrollable section */
+.about-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Full viewport height */
+    padding: 100px 10%;
+}
+
+/* Title Styling */
+.about-title {
+    text-align: left;
+    width: 100%;
+    font-size: 14px;
+    color: #6a6a6a;
+    margin-bottom: 20px;
+}
+
+/* About Section Layout */
+.about-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.about-image img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.about-text {
+    max-width: 500px;
+    text-align: right;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Skills Section */
+.skills-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Full viewport height */
+    padding: 100px 10%;
+    text-align: left;
+}
+
+/* Title Styling */
+.skills-title {
+    font-size: 14px;
+    color: #6a6a6a;
+    margin-bottom: 20px;
+}
+
+/* Skills Layout */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+/* Allow main section to scroll */
+main {
+    position: relative;
+    min-height: 100vh; /* Ensures full viewport height */
+    overflow-y: auto; /* Enables scrolling */
+}

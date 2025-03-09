@@ -28,6 +28,7 @@
     font-style: italic;
 }
 
+
 * {
     margin: 0;
     padding: 0;
@@ -222,7 +223,7 @@ h2 span {
 /* Name Container Styling */
 .name-container {
     position: absolute;
-    top: 65%; /* Adjusted to move further down */
+    top: 63%; /* Adjusted to move further down */
     left: 124px; /* Left padding remains the same */
     transform: translateY(-50%);
     text-align: left;
@@ -231,13 +232,14 @@ h2 span {
 .name {
     font-size: 125px;
     font-weight: 300;
+    margin-left: 40px;
     margin-bottom: -35px; /* Reduce gap between lines */
 }
 
 .position {
     font-size: 125px;
     font-weight: 500;
-    margin-left: 200px; /* Adjusted to move it further from the left */
+    margin-left: 170px; /* Adjusted to move it further from the left */
 }
 nav a::after {
     content: "";
@@ -256,3 +258,4 @@ nav a:hover::after {
     transform: scaleX(1);
     transform-origin: left;
 }
+

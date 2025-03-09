@@ -1,84 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Imeth Sasvin - UI/UX Designer</title>
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Imeth Sasvin - UI/UX Designer</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body class="bg-white text-black p-8">
 
-    <header>
-        <div class="logo">
-            <img src="assets/images/logo.svg" alt="Logo">
-        </div>
-        <nav>
-            <a href="#">Work</a>
-            <a href="#">About me</a>
-            <button class="contact-btn">Say Hello</button>
-        </nav>
-    </header>
+        <header
+            class="flex justify-between items-center gap-5 p-5 px-[66px] relative">
+            <div class="flex items-center gap-5">
 
-    <main>
-        <div class="info-container">
-         <div class="comp-sci">
-                <p>COMPUTER SCIENCE STUDENT</p>
+                <img src="assets/images/logo.svg" alt="Logo" class="h-10">
             </div>
-            <div class="based-lk">
-                <p>BASED IN COLOMBO, LK.</p>
-            </div>
-            <div class="passionate">
-                <p>PASSIONATE UI/UX AND GRAPHIC DESIGNER CRAFTING SEAMLESS EXPERIENCES SINCE 2017. WITH A STRONG FOUNDATION IN BRANDING AND VISUAL STORYTELLING, I BLEND CREATIVITY AND STRATEGY TO BRING DESIGNS TO LIFE.</p>
-            </div>
-        </div>
+            <nav class="flex items-center gap-10">
+                <a href="#"
+                    class="relative text-black text-lg hover:underline transition duration">Work</a>
+                <a href="#"
+                    class="relative text-black text-lg hover:underline transition">About
+                    me</a>
+                <button
+                    class="px-4 py-2 border border-black rounded-md text-lg hover:bg-black hover:text-white transition " >Say
+                    Hello</button>
+            </nav>
+        </header>
 
-        <div class="name-container">
-            <div class="name">
-                IMETH SASVIN
-            </div>
-            <div class="position">
-                UI / UX DESIGNER
-            </div>
-        </div>
-       
-        <div class="social-links">
-            <a href="#">Dribbble</a>
-            <a href="#">Behance</a>
-            <a href="#">LinkedIn</a>
-            <a href="#">Medium</a>
-        </div>
+        <main class="relative min-h-screen overflow-auto">
+            <div class="mt-32 flex flex-col items-center">
+                <div class="flex justify-between w-full px-16 ">
+                    <p
+                        class="text-gray-600 text-sm  left-10 top-40">COMPUTER
+                        SCIENCE STUDENT</p>
+                    <p
+                        class="text-gray-600 text-sm left-1/2 transform -translate-x-1/2 top-40">BASED
+                        IN COLOMBO, LK.</p>
+                    <div>
+                        <p
+                            class="text-gray-600 text-sm mx-auto max-w-lg text-center text-justify leading-relaxed">
+                            PASSIONATE UI/UX AND GRAPHIC DESIGNER CRAFTING
+                            SEAMLESS EXPERIENCES SINCE 2017. WITH A STRONG FOUNDATION IN
+                            BRANDING AND VISUAL STORYTELLING, I BLEND CREATIVITY
+                            AND STRATEGY TO BRING DESIGNS TO LIFE.</p>
 
-        <div class="social-links">
-    <a href="#">Dribbble</a>
-    <a href="#">Behance</a>
-    <a href="#">LinkedIn</a>
-    <a href="#">Medium</a>
-</div>
+                    </div>
 
-    </main>
-    <div class="section-divider"></div> <!-- Divider Line -->
-    <section class="about-section">
-        <div class="about-title">ABOUT</div>
-        <div class="about-container">
-            <div class="about-image">
-                <img src="assets/images/profile.jpg" alt="Profile Picture">
-            </div>
-            <div class="about-text">
-                <p>COMPUTER SCIENCE MAJOR WITH A STRONG DESIGN BACKGROUND, BLENDING TECHNOLOGY AND CREATIVITY TO CRAFT SEAMLESS DIGITAL EXPERIENCES. CURRENTLY STUDYING AT THE <strong>UNIVERSITY OF WESTMINSTER</strong> AND INFORMATICS INSTITUTE OF TECHNOLOGY.</p>
-            </div>
-        </div>
-    </section>
-    <section class="skills-section">
-        <div class="skills-title">SKILLS</div>
-        <div class="skills-container">
-            <p>UI / UX</p>
-            <p>LOGO DESIGN</p>
-            <p>GRAPHIC DESIGN</p>
-            <p>BRANDING</p>
-            <p>PHOTOGRAPHY</p>
-        </div>
-    </section>
+                    <div
+                        class="absolute top-1/2 left-32 transform -translate-y-1/2">
+                        <h1 class="text-[100px] font-light mb-[-25px]">IMETH
+                            SASVIN</h1>
+                        <h2 class="text-[100px] font-medium ml-36">UI / UX
+                            DESIGNER</h2>
+                    </div>
+                </div>
 
-    <script src="js/script.js"></script>
-</body>
-</html>
+                <div
+                    class="absolute top-[80%] left-1/2 transform -translate-x-1/2 flex gap-20 text-sm font-medium">
+                    <a href="#" class="hover:text-gray-400">Dribbble</a>
+                    <a href="#" class="hover:text-gray-400">Behance</a>
+                    <a href="#" class="hover:text-gray-400">LinkedIn</a>
+                    <a href="#" class="hover:text-gray-400">Medium</a>
+                </div>
+            </main>
+
+            <div class="w-4/5 mx-auto h-[1px] bg-gray-500 my-16"></div>
+            <!-- Divider Line -->
+
+            <section
+                class="min-h-screen flex flex-col items-center justify-center px-16">
+                <h3
+                    class="text-gray-600 text-sm w-full text-left mb-4">ABOUT</h3>
+                <div class="flex justify-between items-center w-full">
+                    <img src="assets/images/profile.jpg" alt="Profile Picture"
+                        class="w-72 rounded-lg">
+                    <p
+                        class="max-w-lg text-right text-sm leading-loose">COMPUTER
+                        SCIENCE MAJOR WITH A STRONG DESIGN BACKGROUND, BLENDING
+                        TECHNOLOGY AND CREATIVITY TO CRAFT SEAMLESS DIGITAL
+                        EXPERIENCES. CURRENTLY STUDYING AT THE
+                        <strong>UNIVERSITY OF
+                            WESTMINSTER</strong> AND INFORMATICS INSTITUTE OF
+                        TECHNOLOGY.</p>
+                </div>
+            </section>
+
+            <section
+                class="min-h-screen flex flex-col items-center justify-center px-16">
+                <h3
+                    class="text-gray-600 text-sm w-full text-left mb-4">SKILLS</h3>
+                <div class="flex flex-wrap gap-10 text-2xl font-medium">
+                    <p>UI / UX</p>
+                    <p>LOGO DESIGN</p>
+                    <p>GRAPHIC DESIGN</p>
+                    <p>BRANDING</p>
+                    <p>PHOTOGRAPHY</p>
+                </div>
+            </section>
+
+            <script src="js/script.js"></script>
+        </body>
+    </html>

@@ -32,25 +32,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
 }
 
 body {
     font-family: 'PPNeueMontreal', sans-serif;
     background-color: white;
     color: black;
-    text-align: center;
     padding: 2rem;
-}
-
-/* Main Section */
-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 80vh;
-    text-align: center;
 }
 
 /* Header */
@@ -58,7 +46,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 50px;
+    padding: 20px 80px;
 }
 
 .logo img {
@@ -68,9 +56,9 @@ header {
 nav {
     display: flex;
     align-items: center;
-    gap: 70px; /* Keep spacing */
-    margin-left: auto; /* Keeps alignment to the right */
-    margin-right: 00px; /* Moves closer to the center */
+    gap: 30px;
+    margin-left: auto;
+    margin-right: 10px; /* Slightly move nav items towards center */
 }
 
 nav a {
@@ -85,8 +73,9 @@ nav a {
     background: none;
     cursor: pointer;
     font-size: 16px;
+    font-weight: normal;
     transition: 0.3s;
-    border-radius: 5px; /* Added rounded corners */
+    border-radius: 5px;
 }
 
 .contact-btn:hover {
@@ -94,9 +83,45 @@ nav a {
     color: white;
 }
 
+/* Info Section */
+.info-container {
+   margin-top: 200px
+}
+
+/* Move "COMPUTER SCIENCE STUDENT" closer to the left edge */
+.comp-sci {
+    text-align: left;
+    font-size: 12.39px;
+    color: #6a6a6a;
+    position: absolute;
+    left: 170px; /* Moves closer to the left edge */
+}
+
+/* Position "BASED IN COLOMBO, LK." in the center */
+.based-lk {
+    text-align: center;
+    font-size: 12.39px;
+    color: #6a6a6a;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.passionate {
+    text-align: right;
+    font-size: 12.39px;
+    color: #6a6a6a;
+    position: absolute;
+    right: 120px;
+    max-width: 400px;
+    text-align: justify;
+    top: 300px; /* Moves the paragraph slightly up */
+}
+
 /* Hero Section */
 .hero {
     margin-top: 30px;
+    text-align: center;
 }
 
 h1 {
@@ -120,84 +145,40 @@ h2 span {
     font-weight: 700;
 }
 
-/* Bio */
-.bio {
-    max-width: 600px;
-    margin-top: 30px;
-    font-size: 14px;
-    line-height: 1.5;
-    text-align: center;
-    color: #777;
-}
-
-/* Footer */
-footer {
-    margin-top: 50px;
+.hero{
+    margin-top: 500px;
     display: flex;
     justify-content: center;
     gap: 40px;
-}
-
-footer a {
     text-decoration: none;
     color: black;
     font-size: 14px;
     font-weight: 500;
     transition: color 0.3s ease;
-}
-
-footer a:hover {
     color: gray;
 }
-.info-bio {
-    display: flex;
-    justify-content: space-between;
-    align-items: left;
-    gap: 100px; /* Space between left and right text */
-    text-align: left;
-    font-size: 12.39px;
-    color: #6a6a6a;
-    max-width: 1200px;
-    margin: 20px auto;
-    padding: 0 50px;
-}
 
-nav a {
-    position: relative;
-    text-decoration: none;
-    color: black;
-    font-size: 16px;
-    transition: color 0.3s ease-in-out;
-}
 
-nav a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -2px;
-    width: 100%;
-    height: 2px;
-    background-color: black;
-    transform: scaleX(0);
-    transform-origin: right;
-    transition: transform 0.3s ease-in-out;
-}
-
-nav a:hover::after {
-    transform: scaleX(1);
-    transform-origin: left;
-}
-
-.info-left {
-    display: flex;
-    gap: 215px; /* Space between "COMPUTER SCIENCE STUDENT" and "BASED IN COLOMBO, LK." */
-}
-
-.bio-text {
-    max-width: 400px; /* Ensures the bio text doesn’t stretch too far */
-}
 /* Responsive Design */
 @media (max-width: 768px) {
+    .info-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .comp-sci,
+    .based-lk,
+    .passionate {
+        text-align: center;
+        min-width: auto;
+        position: static;
+    }
+
+    .hero {
+        margin-top: 20px;
+    }
+
     h1 {
         font-size: 40px;
     }
@@ -206,11 +187,49 @@ nav a:hover::after {
         font-size: 50px;
     }
 
-    .info p {
-        font-size: 12px;
-    }
-
     .contact-btn {
         font-size: 14px;
     }
+}
+
+/* Social Links Styling */
+.social-links {
+    position: absolute;
+    bottom: 40px; /* Adjust as needed to position at rock bottom */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    color: black;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: gray;
+}
+
+/* Name Container Styling */
+.name-container {
+    position: absolute;
+    top: 50%; /* Adjusted to be between the two sections */
+    left: 124px; /* Left padding */
+    transform: translateY(-50%);
+    text-align: left;
+}
+
+.name {
+    font-size: 100px;
+    font-weight: bold;
+}
+
+.position {
+    font-size: 100px;
+    font-weight: 500;
 }
